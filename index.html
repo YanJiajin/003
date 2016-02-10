@@ -1,43 +1,52 @@
----
-layout: default
-home: true
----
+<!DOCTYPE html>
+<html>
 
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="噬菌体的故事 : A minimalist, mobile first Jekyll theme.">
 
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-{% for post in paginator.posts %}
+    <title>噬菌体的故事</title>
+  </head>
 
-{% assign minutes = post.content | number_of_words | divided_by: 180 %}
-{% if minutes == 0 %}
-  {% assign read-time = site.var_less_than_a_minute_read %}
-{% else %}
-  {% assign read-time = minutes | append: "&nbsp;" | append: site.var_min_read %}
-{% endif %}
+  <body>
 
-  <article>
-    <span class="meta">
-      {% if site.display-author-front-page %}
-        {% if post.author.name %}
-          {{ post.author.name }} •
-        {% else %}
-          {% if site.author.name %}
-            {{ site.author.name }} •
-          {% endif %}
-        {% endif %}
-      {% endif %}
-      {{ post.date | date: site.date_format }} • {{ read-time }}</span>
-  	<a href="{{ post.url | prepend: site.baseurl }}"><h1>{{ post.title }}</h1></a>
-      <p>
-      {% if post.summary %}
-        {{ post.summary }}&nbsp;<a class="read-more" href="{{ post.url | prepend: site.baseurl }}">{{ site.var_read }}  →</a>
-      {% else %}
-        {{ post.excerpt | remove: '<p>' | remove: '</p>' }}&nbsp;<a class="read-more" href="{{ post.url | prepend: site.baseurl }}">{{ site.var_read }}  →</a>
-      {% endif %}
-      </p>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/YanJiajin/003">View on GitHub</a>
 
-  </article>
-{% endfor %}
+          <h1 id="project_title">噬菌体的故事</h1>
+          <h2 id="project_tagline">A minimalist, mobile first Jekyll theme.</h2>
 
-{% if paginator.previous_page or paginator.next_page %}
-  {% include pagination.html %}
-{% endif %}
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/YanJiajin/003/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/YanJiajin/003/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a id="hi-lechee" class="anchor" href="#hi-lechee" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Hi Lechee</h3>
+
+<p>加油加油</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">噬菌体的故事 maintained by <a href="https://github.com/YanJiajin">YanJiajin</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
